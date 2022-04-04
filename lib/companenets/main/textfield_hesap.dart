@@ -62,7 +62,7 @@ class _MyTextFieldHesapState extends State<MyTextFieldHesap> {
         // ignore: deprecated_member_use
         inputFormatters: [
           // ignore: deprecated_member_use
-          FilteringTextInputFormatter.deny(RegExp(r"^\d+\.?\d{0,2}")),
+          FilteringTextInputFormatter.allow(RegExp(r"^\d+\.?\d{0,2}")),
         ],
       ),
     );
