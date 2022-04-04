@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/loginbutton.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/loginkayitgiris.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/textfield_mail.dart';
+import 'package:v3311456_163311060/companents/login/loginbutton.dart';
+import 'package:v3311456_163311060/companents/login/loginkayitgiris.dart';
+import 'package:v3311456_163311060/companents/login/textfield_mail.dart';
 
 class SifremiUnuttum extends StatelessWidget {
   @override

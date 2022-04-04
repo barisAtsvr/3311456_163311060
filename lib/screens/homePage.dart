@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/loginkayitgiris.dart';
+import 'package:v3311456_163311060/companents/login/loginkayitgiris.dart';
 import '../companents/login/loginbutton.dart';
 
 class HomePage extends StatelessWidget {

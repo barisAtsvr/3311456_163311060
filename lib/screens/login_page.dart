@@ -1,11 +1,11 @@
 
 
 import 'package:flutter/material.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/loginbutton.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/loginkayitgiris.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/text_button.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/textfield_mail.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/textfield_password.dart';
+import 'package:v3311456_163311060/companents/login/loginbutton.dart';
+import 'package:v3311456_163311060/companents/login/loginkayitgiris.dart';
+import 'package:v3311456_163311060/companents/login/text_button.dart';
+import 'package:v3311456_163311060/companents/login/textfield_mail.dart';
+import 'package:v3311456_163311060/companents/login/textfield_password.dart';
 
 class GirisYap extends StatelessWidget {
   //final bool isPasswordVisible;

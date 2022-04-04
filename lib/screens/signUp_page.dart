@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/loginbutton.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/loginkayitgiris.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/my_textfield.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/textfield_mail.dart';
-import 'file:///C:/androidStudioProject/v3311456_163311060/lib/companents/login/textfield_password.dart';
+import 'package:v3311456_163311060/companents/login/loginbutton.dart';
+import 'package:v3311456_163311060/companents/login/loginkayitgiris.dart';
+import 'package:v3311456_163311060/companents/login/my_textfield.dart';
+import 'package:v3311456_163311060/companents/login/textfield_mail.dart';
+import 'package:v3311456_163311060/companents/login/textfield_password.dart';
 
 class KayitOl extends StatelessWidget {
   @override
