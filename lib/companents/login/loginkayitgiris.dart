@@ -28,7 +28,7 @@ class _LoginMyAppBarState extends State<LoginMyAppBar> {
       leading: ElevatedButton.icon(
         onPressed: () => Navigator.of(context).pop(),
         icon: Icon(Icons.arrow_left_sharp,color: Colors.white,),
-        label: Expanded(child: Text(widget.appBarBack!,style: TextStyle(fontSize: 10,color: Colors.white,fontWeight: FontWeight.bold),),),
+        label: Text(widget.appBarBack!,style: TextStyle(fontSize: 10,color: Colors.white,fontWeight: FontWeight.bold),),
         style: ElevatedButton.styleFrom(
             elevation: 0, primary: Colors.transparent),
       ),
