@@ -1,10 +1,15 @@
+import 'package:fitnessaplication/colors.dart';
+import 'package:fitnessaplication/screens/hava_durumu_home.dart';
+import 'package:fitnessaplication/services/auth.dart';
 import 'package:flutter/material.dart';
-import 'package:v3311456_163311060/screens/antrenmanlarPage.dart';
 import 'package:decorated_icon/decorated_icon.dart';
-import 'package:v3311456_163311060/screens/ayarlar_page.dart';
-import 'package:v3311456_163311060/screens/egzersizler_page.dart';
-import 'package:v3311456_163311060/screens/hesaplamalar_page.dart';
-import 'package:v3311456_163311060/screens/kronometre_page.dart';
+import 'package:provider/provider.dart';
+
+import '../../screens/antrenmanlarPage.dart';
+import '../../screens/ayarlar_page.dart';
+import '../../screens/egzersizler_page.dart';
+import '../../screens/hesaplamalar_page.dart';
+import '../../screens/kronometre_page.dart';
 
 class TabBarMain extends StatefulWidget {
   @override
@@ -15,9 +20,9 @@ class _TabBarMainState extends State<TabBarMain> {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData(primaryColor: Colors.black,scaffoldBackgroundColor: Color(0xFFe8e8e8)),
+      data: ThemeData(primarySwatch: myPrimaryBlack),
       child: DefaultTabController(
-        length: 5,
+        length: 6,
         child: SafeArea(
           child: Scaffold(
             appBar: AppBar(
@@ -30,34 +35,45 @@ class _TabBarMainState extends State<TabBarMain> {
                   tabs: [
                     Tab(
                       text: 'Antrenmanlar',
-                      icon: IconDekor(icon: Icons.directions_run,),
+                      icon: IconDekor(
+                        icon: Icons.directions_run,
+                      ),
                     ),
                     Tab(
-                      text: 'Egzersizler',
-                      icon: IconDekor(icon: Icons.fitness_center,)
-                    ),
+                        text: 'Egzersizler',
+                        icon: IconDekor(
+                          icon: Icons.fitness_center,
+                        )),
                     Tab(
-                      text: 'Hesaplamalar',
-                        icon: IconDekor(icon: Icons.create,)
-
-                    ),
-
+                        text: 'Hesaplamalar',
+                        icon: IconDekor(
+                          icon: Icons.create,
+                        )),
                     Tab(
-                      text: 'Kronometre',
-                        icon: IconDekor(icon: Icons.timer,)
-                    ),
+                        text: 'Hava Durumu',
+                        icon: IconDekor(
+                          icon: Icons.wb_cloudy_rounded,
+                        )),
                     Tab(
-                      text: 'Ayarlar',
-                        icon: IconDekor(icon: Icons.settings,)
-                    ),
+                        text: 'Kronometre',
+                        icon: IconDekor(
+                          icon: Icons.timer,
+                        )),
+                    Tab(
+                        text: 'Ayarlar',
+                        icon: IconDekor(
+                          icon: Icons.settings,
+                        )),
                   ],
                 ),
                 preferredSize: Size.fromHeight(30.0),
               ),
               actions: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: Icon(Icons.add_alert),
+                IconButton(
+                  icon: Icon(Icons.add_alert),
+                  onPressed: () async {
+                    Provider.of<Auth>(context, listen: false).signOut();
+                  },
                 )
               ],
             ),
@@ -66,6 +82,7 @@ class _TabBarMainState extends State<TabBarMain> {
                 AntrenmanlarPage(),
                 EgzersizlerPage(),
                 HesaplamalarPage(),
+                HavaDurumuHome(),
                 KronometrePage(),
                 AyarlarPage(),
               ],
@@ -79,12 +96,17 @@ class _TabBarMainState extends State<TabBarMain> {
 
 class IconDekor extends StatelessWidget {
   final IconData? icon;
-  const IconDekor({this.icon,
+  const IconDekor({
+    this.icon,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedIcon(icon!,size: 30.0,shadows: [BoxShadow(blurRadius: 20,color: Colors.white)],);
+    return DecoratedIcon(
+      icon!,
+      size: 30.0,
+      shadows: [BoxShadow(blurRadius: 20, color: Colors.white)],
+    );
   }
 }

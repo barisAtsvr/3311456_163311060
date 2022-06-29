@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 class LoginMyAppBar extends StatefulWidget implements PreferredSizeWidget{
@@ -15,6 +14,7 @@ class LoginMyAppBar extends StatefulWidget implements PreferredSizeWidget{
   _LoginMyAppBarState createState() => _LoginMyAppBarState();
 
   @override
+  // ignore: todo
   // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(60.0);
 }

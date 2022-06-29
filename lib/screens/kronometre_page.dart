@@ -1,9 +1,8 @@
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:v3311456_163311060/companenets/main/kronometre_circle_button.dart';
+
+import '../companenets/main/kronometre_circle_button.dart';
 
 class KronometrePage extends StatefulWidget {
   @override

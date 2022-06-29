@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MyTextButton extends StatelessWidget {
   final VoidCallback? fonks;
+  final String? text;
   const MyTextButton({
-    Key? key, this.fonks
+    Key? key, this.fonks,this.text
   }) : super(key: key);
 
   @override
@@ -16,7 +16,7 @@ class MyTextButton extends StatelessWidget {
       ),
       onPressed: fonks,
       child: Text(
-        'Şifremi Unuttum >',
+        text!,
         style: TextStyle(
             color: Colors.black, fontWeight: FontWeight.bold, fontSize: 17),
         textAlign: TextAlign.end,

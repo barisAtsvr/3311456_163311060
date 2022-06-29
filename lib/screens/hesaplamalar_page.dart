@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
+import 'package:fitnessaplication/companenets/main/my_expansiontile.dart';
+import 'package:fitnessaplication/companenets/main/textfield_hesap.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:v3311456_163311060/companenets/main/button_hesapla.dart';
-import 'package:v3311456_163311060/companenets/main/my_expansiontile.dart';
-import 'package:v3311456_163311060/companenets/main/textfield_hesap.dart';
 import 'dart:math';
+
+import '../companenets/main/button_hesapla.dart';
 
 class HesaplamalarPage extends StatefulWidget {
   @override

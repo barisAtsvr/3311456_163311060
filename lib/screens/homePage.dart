@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:v3311456_163311060/companents/login/loginkayitgiris.dart';
 import '../companents/login/loginbutton.dart';
+import '../companents/login/loginkayitgiris.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -33,7 +32,7 @@ class HomePage extends StatelessWidget {
                         textColor: Colors.black,
                         text: 'GİRİŞ YAP',
                         fonks: () {
-                          Navigator.pushNamed(context, '/girisyap');
+                          Navigator.pushNamed(context, '/on_board');
                         },
                       ),
                       LoginButton(

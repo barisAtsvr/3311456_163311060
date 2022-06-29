@@ -1,7 +1,6 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:v3311456_163311060/companenets/main/%C4%B1mage_button.dart';
+
+import '../companenets/main/ımage_button.dart';
 
 class AntrenmanlarPage extends StatelessWidget {
   @override
@@ -23,12 +22,12 @@ class AntrenmanlarPage extends StatelessWidget {
                     ),
                     ImageButton(
                         text: 'Sırt Biceps 1', imageName: 'sırtarkakol1'),
-                    ImageButton(text: 'Bacak Omuz 1', imageName: 'bacakomuz1'),
+                    ImageButton(text: 'Bacak Shold 1', imageName: 'bacakomuz1'),
                     ImageButton(
                         text: 'Göğüs Triceps 2', imageName: 'gogusarkakol2'),
                     ImageButton(
                         text: 'Sırt Biceps 2', imageName: 'sırtarkakol2'),
-                    ImageButton(text: 'Bacak Omuz 2', imageName: 'bacakomuz2'),
+                    ImageButton(text: 'Bacak Shold 2', imageName: 'bacakomuz2'),
                   ],
                 ),
               ),

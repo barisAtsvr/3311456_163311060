@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:v3311456_163311060/screens/homePage.dart';
+
+import 'homePage.dart';
 
 class Splash extends StatelessWidget {
   @override

@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:v3311456_163311060/companenets/main/egzersiz_buyuk_resim.dart';
-import 'package:v3311456_163311060/companenets/main/egzersiz_kucuk_resim.dart';
+
+import '../companenets/main/egzersiz_buyuk_resim.dart';
+import '../companenets/main/egzersiz_kucuk_resim.dart';
 
 class EgzersizlerPage extends StatelessWidget {
   @override

@@ -1,10 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyTextFieldPassword extends StatefulWidget {
   final String? hinttext;
   final String? labeltext;
-  const MyTextFieldPassword ({ Key? key, this.hinttext,this.labeltext='Şifre'}): super(key: key);
+  final FormFieldValidator<String> validator;
+  final TextEditingController? controller;
+  const MyTextFieldPassword ({ Key? key, this.hinttext,this.labeltext='Şifre', this.controller, required this.validator}): super(key: key);
 
   @override
   _MyTextFieldPasswordState createState() => _MyTextFieldPasswordState();
@@ -13,7 +14,7 @@ class MyTextFieldPassword extends StatefulWidget {
 class _MyTextFieldPasswordState extends State<MyTextFieldPassword> {
 
 
-  final emailController = TextEditingController();
+ 
   bool isPasswordVisible = true;
 
   FocusNode? myFocusNode;
@@ -30,14 +31,16 @@ class _MyTextFieldPasswordState extends State<MyTextFieldPassword> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: widget.validator,
       cursorColor: Colors.white,
       //enableInteractiveSelection: false,
       autofocus: false,
       focusNode: myFocusNode,
       style: buildTextStyle(),
-      controller: emailController,
+      controller: widget.controller,
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.lock,color: Colors.white,),
         fillColor: Colors.black87,
         filled: true,
         hintText: widget.hinttext,

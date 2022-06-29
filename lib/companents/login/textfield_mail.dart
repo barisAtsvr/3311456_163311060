@@ -1,7 +1,10 @@
-import 'package:flutter/cupertino.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
 class MyTextFieldMail extends StatefulWidget {
+  final TextEditingController? controller;
+
+  const MyTextFieldMail({super.key, this.controller});
   @override
   _MyTextFieldMailState createState() => _MyTextFieldMailState();
 }
@@ -22,19 +25,27 @@ class _MyTextFieldMailState extends State<MyTextFieldMail> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: ((value) {
+        if(!EmailValidator.validate(value!)){
+          return 'Lütfen Geçerli Bir Adres Giriniz';
+        }
+        else{
+          return null;
+        }
+      }),
       cursorColor: Colors.white,
       //enableInteractiveSelection: false,
       autofocus: false,
       focusNode: myFocusNode,
       style: buildTextStyle(),
-      controller: emailController,
+      controller: widget.controller,
       decoration: InputDecoration(
         fillColor: Colors.black87,
         filled: true,
         hintText: 'name@example.com',
         hintStyle: buildTextStyle(),
-        labelText: 'Email',
+        labelText: 'E-mail',
         labelStyle: buildTextStyle(),
         prefixIcon: Icon(Icons.mail,color: Colors.white,),
         suffixIcon: IconButton(
