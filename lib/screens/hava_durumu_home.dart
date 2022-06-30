@@ -34,6 +34,7 @@ class _HavaDurumuHomeState extends State<HavaDurumuHome> {
     //print(position);
   }
   Future<void>izinVer()async{
+    // ignore: unused_local_variable
     LocationPermission permission = await Geolocator.requestPermission();
   }
 
@@ -58,16 +59,16 @@ class _HavaDurumuHomeState extends State<HavaDurumuHome> {
       locationDataLonLat=sehir;
     });
   }
-
+  //konya lat 38.1667, lon 32.5
   Future<void> getLocationDataLong() async {
     konum = await http.get(Uri.parse(
-        'https://api.openweathermap.org/data/2.5/weather?lat=${position!.latitude}&lon=${position!.longitude}&appid=8cbc8e33e57f4e5a0787c8ae2205ecb6'));
+        'https://api.openweathermap.org/data/2.5/weather?lat=38.1667&lon=32.5&appid=8cbc8e33e57f4e5a0787c8ae2205ecb6'));
     locationDataLonLat = jsonDecode(konum.body)['name'];
   }
 
   void getDataFromAPI() async {
     await izinVer();
-    await getDevicePosition();
+    //await getDevicePosition();
     await getLocationDataLong();
     await getLocationData();
 

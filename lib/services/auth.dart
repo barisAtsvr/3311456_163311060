@@ -8,6 +8,7 @@ class Auth {
     return userCredentials.user;
   }
 
+  // ignore: body_might_complete_normally_nullable
   Future<User?> createUserWithEmailAndPassword(
       String email, String password) async {
     UserCredential userCredentials;
@@ -21,6 +22,7 @@ class Auth {
     }
   }
 
+  // ignore: body_might_complete_normally_nullable
   Future<User?> sigInWithEmailPassword(String email, String password) async {
     UserCredential userCredentials;
 

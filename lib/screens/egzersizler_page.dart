@@ -18,7 +18,7 @@ class EgzersizlerPage extends StatelessWidget {
                   BuyukContainerResim(imageName: 'eomuz.JPG',),
                   KuucukContainerResim(imageName: 'earkakol.JPG',),
                   BuyukContainerResim(imageName: 'ebacak.JPG',),
-                  KuucukContainerResim(imageName: 'ekisisel.JPG',),
+                  KuucukContainerResim(imageName: 'ekisisel.JPG',onTap: (){Navigator.pushNamed(context, '/users_save');},),
                   SizedBox(height: 10,),
 
                 ],

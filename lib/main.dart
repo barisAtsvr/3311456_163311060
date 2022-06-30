@@ -3,8 +3,9 @@ import 'package:fitnessaplication/screens/hava_durumu_home.dart';
 import 'package:fitnessaplication/screens/login_page.dart';
 import 'package:fitnessaplication/screens/sifremi_unuttumPage.dart';
 import 'package:fitnessaplication/screens/splash_page.dart';
+import 'package:fitnessaplication/screens/users_save.dart';
 import 'package:fitnessaplication/services/auth.dart';
-import 'package:fitnessaplication/widgets/on_board_stream.dart';
+import 'package:fitnessaplication/models/on_board_stream.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'companenets/main/tabBar.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/sifremiUnuttum':(context)=>SifremiUnuttum(),
         '/tabBarMain':(context)=>TabBarMain(),
         'havaDurumuHome':(context)=>HavaDurumuHome(),
+        '/users_save':(context)=>Users(),
       }
     ),);
   }
